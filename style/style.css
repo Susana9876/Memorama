@@ -1,0 +1,71 @@
+:root{
+    --width: calc(90vw/4);
+    --height: calc(90vw/4);
+}
+
+*{
+    transition: all 0.5s;
+}
+
+body{
+    padding: 20px;
+    margin: 0;
+    -webkit-perspective: 1000;
+    background-color: #C39BD3;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+div{
+    display: inline-block;
+}
+
+.contenido_tarjeta, .tarjeta, .cuadro{
+    cursor: pointer;
+    width: var(--width);
+    height: var(--height);
+    min-width: 80px;
+}
+
+.detras{
+    background-color: pink;
+    transform: rotateY(180deg);
+}
+
+.delante{
+    background-color: purple;
+}
+
+.tarjeta{
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.cuadro{
+    position: absolute;
+    backface-visibility: hidden;
+    font-size: 500%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuadro img{
+    width: var(--width);
+    height: var(--height);
+
+}
+
+
+.reiniciar{
+    cursor: pointer;
+    background-color: pink;
+    padding: 20px;
+    border-radius: 50px;
+    border: purple 1px solid;
+}
