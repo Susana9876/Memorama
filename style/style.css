@@ -56,8 +56,10 @@ div{
 }
 
 .cuadro img{
-    width: var(--width);
-    height: var(--height);
+    /* width: var(--width);
+    height: var(--height); */
+    width: 200px;
+    height: 200px;
 
 }
 
@@ -68,4 +70,8 @@ div{
     padding: 20px;
     border-radius: 50px;
     border: purple 1px solid;
+}
+
+#intentos{
+    font-family:'Courier New', Courier, monospace;
 }

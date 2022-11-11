@@ -1,5 +1,8 @@
 let icon = [];
 let selecciones = [];
+let contarUno = 0;
+let contarTodo = 0;
+const intentos = document.getElementById("intentos");
 
 crearCuadricula()
 
@@ -24,7 +27,7 @@ function crearCuadricula(){
 
     for (let i = 0; i < 16; i++) {
         cuadros.push(`
-        <div class="contenido_tarjeta" onclick="seleccionar(${i})">
+        <div class="contenido_tarjeta" onclick="seleccionar(${i}), contador()">
           <div class="tarjeta" id="tarjeta${i}">
             <div class="cuadro delante">
                 <i class="fa-regular fa-question"></i>
@@ -71,4 +74,12 @@ function deseleccionar(selecciones){
             trasera2.style.background = "#52BE80";
         }
     }, 1000);
+}
+
+function contador(){
+    contarUno ++;
+    if(contarUno % 2 == 0){
+        contarTodo ++;
+    }
+    intentos.innerHTML = `Intentos: ${contarTodo}`;
 }
